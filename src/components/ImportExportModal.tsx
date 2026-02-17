@@ -43,8 +43,8 @@ export default function ImportExportModal({
   const defaultValue = JSON.stringify(value, null, 2)
 
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 px-4 backdrop-blur-sm">
-      <div className="w-full max-w-lg rounded-3xl border border-border bg-background-subtle p-4 sm:p-5 shadow-soft">
+    <div className="fixed inset-0 z-40 flex items-center justify-center bg-slate-900/40 px-4 backdrop-blur-sm dark:bg-black/50">
+      <div className="w-full max-w-lg rounded-3xl border border-slate-200 bg-white p-4 shadow-lg dark:border-border dark:bg-background-subtle sm:p-5 dark:shadow-soft">
         <div className="mb-3 flex items-center justify-between gap-2">
           <div>
             <h2 className="text-sm font-semibold tracking-tight">Import / Export JSON</h2>
@@ -55,7 +55,7 @@ export default function ImportExportModal({
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-border bg-background-softer px-2 py-1 text-xs text-foreground-muted hover:text-foreground"
+            className="rounded-full border border-slate-200 bg-sky-50 px-2 py-1 text-xs text-foreground-muted hover:text-foreground dark:border-border dark:bg-background-softer"
           >
             Esc
           </button>
@@ -65,13 +65,13 @@ export default function ImportExportModal({
           <textarea
             name="payload"
             defaultValue={defaultValue}
-            className="h-52 w-full resize-none rounded-2xl border border-border bg-background-softer p-3 text-xs font-mono text-foreground outline-none ring-0 focus:border-accent focus:ring-1 focus:ring-accent/40"
+            className="h-52 w-full resize-none rounded-2xl border border-slate-200 bg-sky-50 p-3 text-xs font-mono text-slate-900 outline-none ring-0 focus:border-accent focus:ring-1 focus:ring-accent/40 dark:border-border dark:bg-background-softer dark:text-foreground"
             spellCheck={false}
           />
           <div className="flex items-center justify-between gap-2 text-[11px] text-foreground-muted">
             <p>
               Structure:{' '}
-              <code className="rounded bg-background-softer px-1 py-0.5 text-[10px]">
+              <code className="rounded bg-sky-50 px-1 py-0.5 text-[10px] dark:bg-background-softer">
                 {'{ schedule, targets }'}
               </code>
             </p>
@@ -79,7 +79,7 @@ export default function ImportExportModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full border border-border bg-background-softer px-3 py-1 text-[11px] text-foreground-muted hover:text-foreground"
+                className="rounded-full border border-slate-200 bg-sky-50 px-3 py-1 text-[11px] text-foreground-muted hover:text-foreground dark:border-border dark:bg-background-softer"
               >
                 Cancel
               </button>

@@ -67,7 +67,7 @@ export default function SummaryPanel({
   const hourOptions: Intl.NumberFormatOptions = { maximumFractionDigits: 2 }
 
   return (
-    <section className="space-y-4 rounded-3xl border border-border bg-background-subtle p-4 sm:p-5 shadow-soft">
+    <section className="space-y-4 rounded-3xl border border-slate-200 bg-white/90 p-4 shadow-sm dark:border-border dark:bg-background-subtle sm:p-5 dark:shadow-soft">
       <div className="space-y-1">
         <h2 className="text-sm font-semibold tracking-tight">Summary</h2>
         <p className="text-xs text-foreground-muted">
@@ -97,7 +97,7 @@ export default function SummaryPanel({
         />
       </div>
 
-      <div className="grid gap-2 rounded-2xl border border-border bg-background-softer/60 p-3">
+      <div className="grid gap-2 rounded-2xl border border-slate-200 bg-sky-50/80 p-3 dark:border-border dark:bg-background-softer/60">
         <div className="flex items-center justify-between gap-2">
           <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-foreground-muted">
             TARGETS
@@ -126,7 +126,7 @@ export default function SummaryPanel({
         </div>
       </div>
 
-      <div className="space-y-2 rounded-2xl border border-border bg-background-softer/50 p-3">
+      <div className="space-y-2 rounded-2xl border border-slate-200 bg-sky-50/80 p-3 dark:border-border dark:bg-background-softer/50">
         <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-foreground-muted">
           BY DAY
         </p>
@@ -189,14 +189,14 @@ function SummaryRow({ label, primary, secondary, progress }: SummaryRowProps) {
   const pctClampedForBar = Math.min(pct, 100)
 
   return (
-    <div className="space-y-1.5 rounded-2xl border border-border bg-background-softer/40 p-3">
+    <div className="space-y-1.5 rounded-2xl border border-slate-200 bg-sky-50/80 p-3 dark:border-border dark:bg-background-softer/40">
       <div className="flex items-baseline justify-between gap-2">
         <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-foreground-muted">
           {label}
         </p>
         <p className="text-xs font-mono tabular-nums text-foreground">{primary}</p>
       </div>
-      <div className="relative h-1.5 overflow-hidden rounded-full bg-background-subtle">
+      <div className="relative h-1.5 overflow-hidden rounded-full bg-slate-200/70 dark:bg-background-subtle">
         <div
           className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-accent via-sky-400 to-emerald-400"
           style={{ width: `${pctClampedForBar}%` }}
@@ -224,7 +224,7 @@ function TargetInput({ id, label, value, onChange }: TargetInputProps) {
   return (
     <label htmlFor={id} className="space-y-1 text-xs">
       <span className="block text-[11px] text-foreground-muted">{label}</span>
-      <div className="flex items-center gap-1.5 rounded-lg border border-border bg-background-softer px-2 py-1.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/40">
+      <div className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-sky-50/80 px-2 py-1.5 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent/40 dark:border-border dark:bg-background-softer">
         <input
           id={id}
           type="number"

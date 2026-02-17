@@ -45,7 +45,7 @@ export default function DayCard({ dayKey, schedule, onChange }: DayCardProps) {
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-background-subtle/80 px-3 py-3 sm:px-4 sm:py-4 shadow-soft">
+    <div className="rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 shadow-sm dark:border-border dark:bg-background-subtle/80 sm:px-4 sm:py-4 dark:shadow-soft">
       <div className="mb-2 flex items-center justify-between gap-2">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground-muted">
           {DAY_LABELS[dayKey]}
@@ -69,14 +69,14 @@ export default function DayCard({ dayKey, schedule, onChange }: DayCardProps) {
                   type="time"
                   value={interval.start ?? ''}
                   onChange={(e) => handleIntervalChange(index, 'start', e.target.value)}
-                  className="h-8 w-full rounded-lg border border-border bg-background-softer px-2 text-xs font-mono text-foreground outline-none ring-0 transition focus:border-accent focus:ring-1 focus:ring-accent/40"
+                  className="h-8 w-full rounded-lg border border-slate-200 bg-sky-50/80 px-2 text-xs font-mono text-slate-900 outline-none ring-0 transition focus:border-accent focus:ring-1 focus:ring-accent/40 dark:border-border dark:bg-background-softer dark:text-foreground"
                 />
                 <span className="text-xs text-foreground-muted">–</span>
                 <input
                   type="time"
                   value={interval.end ?? ''}
                   onChange={(e) => handleIntervalChange(index, 'end', e.target.value)}
-                  className="h-8 w-full rounded-lg border border-border bg-background-softer px-2 text-xs font-mono text-foreground outline-none ring-0 transition focus:border-accent focus:ring-1 focus:ring-accent/40"
+                  className="h-8 w-full rounded-lg border border-slate-200 bg-sky-50/80 px-2 text-xs font-mono text-slate-900 outline-none ring-0 transition focus:border-accent focus:ring-1 focus:ring-accent/40 dark:border-border dark:bg-background-softer dark:text-foreground"
                 />
               </div>
               {index === 0 && (
