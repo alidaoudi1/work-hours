@@ -9,7 +9,7 @@ body,
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 dark:bg-background dark:text-foreground antialiased;
+  @apply bg-sky-50 text-slate-900 dark:bg-background dark:text-foreground antialiased;
 }
 
 ::selection {

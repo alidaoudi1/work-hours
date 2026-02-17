@@ -133,7 +133,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-background dark:text-foreground flex flex-col">
+    <div className="min-h-screen bg-sky-50 text-slate-900 dark:bg-background dark:text-foreground flex flex-col">
       <div className="flex-1 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8">
         <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2">
