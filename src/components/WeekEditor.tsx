@@ -1,4 +1,4 @@
-import { DAY_LABELS, type DayKey, type DaySchedule, type ScheduleState } from '../lib/time'
+import { type DayKey, type DaySchedule, type ScheduleState } from '../lib/time'
 import DayCard from './DayCard'
 
 interface WeekEditorProps {
